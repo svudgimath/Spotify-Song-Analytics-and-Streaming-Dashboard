@@ -4,8 +4,8 @@ import time
 import pandas as pd
 
 # Step 1: Spotify API credentials
-client_id = 'ce10b72a827e493cab5780e294226d3a'  # Replace with your Client ID
-client_secret = '1b520f1bcc354c38b7b1b92723333cd6'  # Replace with your Client Secret
+client_id = ''  # Replace with your Client ID
+client_secret = ''  # Replace with your Client Secret
 redirect_uri = 'https://example.com/callback'  # Your Redirect URI
 
 # Step 2: Get Spotify API access token
