@@ -1,0 +1,156 @@
+{
+  "data": {"name": "dataset"},
+  "spacing": 1,
+  "bounds": "flush",
+  "vconcat": [
+    {
+      "height": 25,
+      "mark": {
+        "type": "bar",
+        "stroke": null,
+        "cornerRadiusEnd": 4,
+        "tooltip": true,
+        "color": {"expr": "pbiColor(4)"}
+      },
+      "encoding": {
+        "x": {
+          "field": "Month",
+          "sort": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+          ],
+          "axis": null
+        },
+        "y": {
+          "field": "_Track",
+          "aggregate": "mean",
+          "axis": null
+        }
+      }
+    },
+    {
+      "spacing": 1,
+      "bounds": "flush",
+      "hconcat": [
+        {
+          "mark": {
+            "type": "rect",
+            "stroke": "white",
+            "tooltip": true,
+            "cornerRadius": 6
+          },
+          "encoding": {
+            "y": {
+              "field": "Day of Week",
+              "type": "ordinal",
+              "title": "",
+              "sort": [
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri",
+                "Sat",
+                "Sun"
+              ],
+              "axis": {
+                "domain": false,
+                "ticks": false,
+                "labels": true,
+                "labelAngle": 0,
+                "labelPadding": 5,
+                "labelColor": {
+                  "expr": "pbiColor(7)"
+                }
+              }
+            },
+            "x": {
+              "field": "Month",
+              "type": "ordinal",
+              "title": "",
+              "sort": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+              ],
+              "axis": {
+                "domain": false,
+                "ticks": false,
+                "labels": true,
+                "labelAngle": 0,
+                "labelColor": {
+                  "expr": "pbiColor(7)"
+                },
+                "titleColor": {
+                  "expr": "pbiColor(7)"
+                }
+              }
+            },
+            "color": {
+              "aggregate": "mean",
+              "field": "_Track",
+              "type": "quantitative",
+              "title": "Orders",
+              "scale": {
+                "scheme": "pbiColorLinear"
+              },
+              "legend": null
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "bar",
+            "stroke": null,
+            "cornerRadiusEnd": 4,
+            "tooltip": true,
+            "color": {
+              "expr": "pbiColor(4)"
+            }
+          },
+          "width": 15,
+          "encoding": {
+            "y": {
+              "field": "Day of Week",
+              "axis": null,
+              "sort": [
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri",
+                "Sat",
+                "Sun"
+              ]
+            },
+            "x": {
+              "field": "_Track",
+              "type": "quantitative",
+              "aggregate": "mean",
+              "axis": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
